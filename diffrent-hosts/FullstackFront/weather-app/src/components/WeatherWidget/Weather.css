@@ -1,0 +1,17 @@
+.weather-widget {
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid rgba(97, 218, 251, 0.15);
+    width: 150px;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.15);
+    background-color: rgba(97, 218, 251, 0.15); 
+    margin: auto;
+}
+.weather-widget-lable { font-size: 14px; }
+.weather-widget-icon {}
+.weather-widget-description {}
