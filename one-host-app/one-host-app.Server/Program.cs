@@ -26,7 +26,16 @@ namespace one_host_app.Server
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
+            if (app.Environment.IsStaging())
+            {
+                app.UseSpa(spa =>
+                {
+                    //spa.Options.SourcePath = "wwwroot";
+                    spa.UseProxyToSpaDevelopmentServer(baseUri: "https://localhost:5173");
+                });
+            }
+
+            app.UseHttpsRedirection();           
 
             app.UseAuthorization();
 
